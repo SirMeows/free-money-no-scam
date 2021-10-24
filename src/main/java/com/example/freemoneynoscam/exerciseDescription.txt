@@ -1,8 +1,19 @@
 Case: FreeMoneyNoScam.dk
+
 We are building a startup together! The startup is called FreeMoneyNoScam.dk
 You can fork this repository: https://github.com/nicklasdean/free-money-no-scam.git
+
 The first objective from our startup is collecting as many valid mail-addresses as possible
 and saving them in a database (for very legal and ethical purposes).
 We also need to confirm that the mail addresses are valid.
-An e-mail validation service.For the first iteration a valid e-mail contains a "@" an at least 1 "."If the user enters a valid e-mail -
-direct them to a success site.Use the PRG pattern described on this site above
+An e-mail validation service.
+For the first iteration a valid e-mail contains a "@" an at least 1 "."
+If the user enters a valid e-mail -
+direct them to a success site.
+Use the PRG pattern described on this site above
+
+Exercise 2
+Finish the FreeMoneyNoScam application with the following requirements fulfilled:
+A user should be able to register their e-mail by a POST-request and a simple form
+The e-mail should be saved in a database
+A user should be able to see all registered e-mails on a separate template

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Email List</title>
+</head>
+<body>
+    <tr th:each="email : ${emailList}">
+        <td th:text="${email}"/>
+        <br>
+    </tr>
+</body>
+</html>
