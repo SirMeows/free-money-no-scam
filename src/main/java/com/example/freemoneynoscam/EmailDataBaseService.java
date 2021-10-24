@@ -8,25 +8,26 @@ public class EmailDataBaseService {
     public Connection conn;
 
     public void insertEmailIntoDB(String input) {
-        var query = "INSERT INTO email ('email-address') VALUES(input)";
-        executeQuery(query);
+        var query = "INSERT INTO email (`email-address`) VALUES (?)";
+        executeQuery(query,input);
     }
 
     public List<String> getAllEmails() {
         var list = new ArrayList<String>();
-        var query = "SELECT 'email-address' FROM email";
+        var query = "SELECT `email-address` FROM email";
 
 
         return list;
     }
 
-    private void executeQuery(String query) {
+    private void executeQuery(String query, String input) {
         try {
             if(conn==null) {
-                var conn = createServerConnection();
+                conn = createServerConnection();
             }
 
             var psts = conn.prepareStatement(query);
+            psts.setString(1, input);
             psts.execute();
 
         } catch (SQLException e) {

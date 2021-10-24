@@ -11,12 +11,12 @@ import org.springframework.web.context.request.WebRequest;
 public class EmailRequestController {
     EmailDataBaseService edbs = new EmailDataBaseService();
 
-    @GetMapping("/get-email")
+    @GetMapping("/")
     public String emailRequest() {
         return "email-request-page";
     }
 
-    @PostMapping("/get-email")
+    @PostMapping("/save-email")
     public String userEmail(WebRequest wr) {
         var parameter = wr.getParameter("email");
         edbs.insertEmailIntoDB(parameter);
